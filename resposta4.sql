@@ -1,5 +1,5 @@
 SELECT 
-	c.customerName AS nome_cliente, 
+  c.customerName AS nome_cliente, 
   ROUND(SUM(od.quantityOrdered * od.priceEach)::NUMERIC, 2) AS total_gasto
 FROM customers c
 JOIN orders o ON c.customerNumber = o.customerNumber
